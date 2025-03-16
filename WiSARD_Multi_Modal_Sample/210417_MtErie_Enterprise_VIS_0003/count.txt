@@ -1,2 +1,0 @@
-number of humans: 1022
- number of images: 264
