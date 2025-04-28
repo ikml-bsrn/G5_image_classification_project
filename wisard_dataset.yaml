@@ -1,7 +1,0 @@
----
-# YOLOv11 Dataset Configuration
-train: /Users/ikmalbasirun/Documents/GitHub/G5_image_classification_project/WiSARD_dataset/train/images # Update with your actual train images path
-val: /Users/ikmalbasirun/Documents/GitHub/G5_image_classification_project/WiSARD_dataset/val/images # Update with your actual validation images path
-
-nc: 1 # Number of classes
-names: [ "person" ] # Class names

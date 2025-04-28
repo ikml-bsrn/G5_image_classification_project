@@ -1,0 +1,8 @@
+---
+# YOLOv11 Dataset Configuration for thermal images
+train: /Users/ikmalbasirun/Documents/GitHub/G5_image_classification_project/WiSARD_dataset/registered/train/thermal # Update with your actual train images path
+val: Users/ikmalbasirun/Documents/GitHub/G5_image_classification_project/WiSARD_dataset/registered/val/thermal # Update with your actual validation images path
+test: Users/ikmalbasirun/Documents/GitHub/G5_image_classification_project/WiSARD_dataset/registered/test/thermal
+
+nc: 1 # Number of classes
+names: [ "person" ] # Class names
