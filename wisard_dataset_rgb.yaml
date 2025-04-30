@@ -1,8 +1,8 @@
 ---
 # YOLOv11 Dataset Configuration for RGB images
-train: /Users/ikmalbasirun/Documents/GitHub/G5_image_classification_project/WiSARD_dataset/registered/train/rgb # Update with your actual train images path
-val: Users/ikmalbasirun/Documents/GitHub/G5_image_classification_project/WiSARD_dataset/registered/val/rgb # Update with your actual validation images path
-test: Users/ikmalbasirun/Documents/GitHub/G5_image_classification_project/WiSARD_dataset/registered/test/rgb
+train: WiSARD_dataset/registered/train/rgb/images # Update with your actual train images path
+val: WiSARD_dataset/registered/val/rgb/images # Update with your actual validation images path
+test: WiSARD_dataset/registered/test/rgb/images
 
 nc: 1 # Number of classes
 names: [ "person" ] # Class names

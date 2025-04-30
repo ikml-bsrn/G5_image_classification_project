@@ -1,0 +1,8 @@
+# 10/300 iterations complete ✅ (16.21s)
+# Results saved to runs/detect/tune2
+# Best fitness=0.0 observed at iteration 1
+# Best fitness metrics are {}
+# Best fitness model is runs/detect/train34
+# Best fitness hyperparameters are printed below.
+
+lr0: 0.01
