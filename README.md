@@ -1,4 +1,4 @@
-# WiSAR: Image Classification for Wilderness Search and Rescue
+# WiSAR: Image Classification for Wilderness Search and Rescue (2025)
 
 ## Overview
 This project investigates the effectiveness of YOLOv5, YOLOv8, and YOLOv11 models in detecting persons in Wilderness Search and Rescue (WiSAR) scenarios using both RGB and thermal infrared (IR) imagery. The aim is to evaluate model performance across detection accuracy, inference speed, and generalization capability in natural, occluded environments.
