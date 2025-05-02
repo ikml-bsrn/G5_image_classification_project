@@ -11,7 +11,8 @@ Data Sources: WiSARD (RGB and thermal)
 
 **Workflow**:
 - Data preprocessing and cleaning.
-- Training and fine-tuning YOLOv8–v11 models.
+- Dataset review and selection.
+- Training and fine-tuning YOLO models (v5, v8 and v11)
 - Evaluation based on recall, mAP, precision, and inference time.
 - Hyperparameter tuning to improve performance.
   
