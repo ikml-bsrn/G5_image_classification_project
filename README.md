@@ -7,9 +7,8 @@ This project investigates the effectiveness of YOLOv5, YOLOv8, and YOLOv11 model
 WiSAR missions face obstacles such as dense vegetation, lighting variability, and environmental occlusion, which reduce the effectiveness of manual search efforts. Deep learning methods like YOLO have shown potential for automating person detection. Leveraging both RGB and IR data can enhance detection under varied conditions (e.g., daylight and low visibility). This project focuses on the WiSARD dataset, which contains labeled RGB and thermal image pairs specific to SAR contexts.
 
 ## Methodology
-Model Selection
 
-We selected YOLOv5, YOLOv8, and YOLOv11 based on literature benchmarks, performance consistency, and relevance to SAR applications:
+We evaluated YOLOv5, YOLOv8, and YOLOv11 for human detection in wilderness search and rescue (WiSAR) using the WiSARD dataset. Each model was trained and tested separately on RGB and thermal IR image subsets, selected from the “MtErie” and “FHL” locations. A 60-20-20 split was applied within each folder, and default YOLO data augmentation was enabled. Training was conducted in Google Colab with manual hyperparameter tuning (batch size, learning rate), using Ultralytics' implementation and custom YAML configuration for single-class detection.
 
 - YOLOv5: Baseline model widely used in SAR literature and the WiSARD paper.
 - YOLOv8: Balanced in terms of speed, accuracy, and hardware efficiency.
@@ -17,13 +16,10 @@ We selected YOLOv5, YOLOv8, and YOLOv11 based on literature benchmarks, performa
 - Older or less-documented versions (e.g., YOLOv6, v7, v9, v10) were excluded due to inconsistent results or poor SAR relevance.
 
 ## Dataset
+We used the **WiSARD** dataset, a multimodal collection of over 70,000 RGB and thermal infrared images captured via UAVs in wilderness environments. For this project, we selected images from the MtErie and FHL locations based on criteria including human presence, occlusion, and alignment of RGB–IR pairs. Only labeled images were included. The dataset was split 60-20-20 (train/val/test) per folder to ensure environment diversity and mitigate aggregation bias.
 
-We used only the WiSARD dataset for its SAR-specific relevance and inclusion of paired RGB and thermal IR images. Images were manually reviewed, and only high-quality pairs with clear person labels were retained. We split the dataset into:
-
-- 472 images for training
-- 113 images for validation
-- 142 images for testing
-- Each subset was selected to minimize overlap in environmental context, though a later error revealed that the test set had domain shift (Environment 3 only), which affected model generalisation.
+Refer to the link below for more information about the WiSARD Dataset:
+https://sites.google.com/uw.edu/wisard/
 
 ## Model Development
 
@@ -35,11 +31,16 @@ We used only the WiSARD dataset for its SAR-specific relevance and inclusion of 
 
 We used the FATES framework to evaluate ethical issues around dataset bias, human subject visibility, and transparency in model reporting.
 
-## Results (Preliminary)
+## Results
 
-Initial model showed a recall score of 0.48. Howeveer, when validated using the testing set, recall score reduced to ~0.11, which largely is due to spatial domain mismatch in training vs. test environments. This is currently being fixed.
+- Thermal IR consistently outperformed RGB across all metrics and YOLO versions.
+- YOLOv11 with thermal IR achieved the highest recall (0.592).
+- YOLOv11 was the top performer in both RGB and IR modalities.
+- Manual hyperparameter tuning improved stability across models.
+- Aggregation bias was identified and mitigated by ensuring folder-level distribution in train/val/test sets.
 
-Final evaluation and benchmarking are in progress.
+All training logs, configuration files, and visualisations are included in the /results and /configs directories.
+
 
 ## The Team
 
