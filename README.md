@@ -60,4 +60,8 @@ Our study integrates thermal IR data into model training, reflecting the growing
 - **Faisal Alharbi**: Focused on hyperparameter tuning research, assisted in model development.
 - **Syahmina Mohd Ansar**: Contributed to ethical considerations (FATES) and supported documentation.
 
+## Bibliography
+- Gupta, P., & Singh, U. (2025). Evaluation of several yolo architecture versions for person detection and counting. Multimedia Tools and Applications. https://doi.org/10.1007/s11042-025-20662-z 
+- Bañuls, A., Mandow, A., Vázquez-Martín, R., Morales, J., & García-Cerezo, A. (2020, November 1). Object Detection from Thermal Infrared and Visible Light Cameras in Search and Rescue Scenes. IEEE Xplore.  https://doi.org/10.1109/SSRR50563.2020.9292593 
+
 
